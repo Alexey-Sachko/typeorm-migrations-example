@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  db:
+    image: postgres:14-alpine
+    container_name: migrations-example
+    environment:
+      - POSTGRES_DB=migrations-example
+      - POSTGRES_USER=migrations-example-user
+      - POSTGRES_PASSWORD=migrations-example-password
+    ports:
+      - '5434:5432'
