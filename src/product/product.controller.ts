@@ -10,4 +10,9 @@ export class ProductController {
   getList(): Promise<Product[]> {
     return this.productService.getList();
   }
+
+  @Get('create-dumb-data')
+  createDumbData(): Promise<Product[]> {
+    return this.productService.createDumbData();
+  }
 }
